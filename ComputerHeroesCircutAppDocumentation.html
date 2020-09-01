@@ -1,0 +1,493 @@
+<html>
+<header>
+    <link rel="stylesheet" type="text/css" href="css/ComputerHeroes.css">
+</header>
+<body>
+    <div id="title-bar">
+        <h1>Computer Heroes</h1>
+    </div>
+    <div id="nav-bar">
+        <div id="nav-bar-inner">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#" onclick="ScrollToChapter('getting-started')" class="chapter-select">Getting Started</a></li>
+                <li><a href="#" onclick="ScrollToChapter('app-function')" class="chapter-select">App Function (in more detail)</a></li>
+                <li><a href="#" onclick="ScrollToChapter('choosing-ac-or-dc')" class="chapter-select">Choosing AC or DC, Choosing the Source Frequency. {AC DC only}</a></li>
+                <li><a href="#" onclick="ScrollToChapter('node-mode')" class="chapter-select">[Node Mode]</a></li>
+                <li><a href="#" onclick="ScrollToChapter('branch-mode')" class="chapter-select">[Branch Mode]</a></li>
+                    <ul>
+                        <li><a href="#" onclick="ScrollToChapter('branches-dc-detail')" class="chapter-select">Branches in DC  In more detail</a></li>
+                        <li><a href="#" onclick="ScrollToChapter('branches-ac-detail')" class="chapter-select">Branches in AC  In more detail</a></li>
+                        <li><a href="#" onclick="ScrollToChapter('modify-branch')" class="chapter-select">Modifying a Branch</a></li>
+                    </ul>
+                <li><a href="#" onclick="ScrollToChapter('main-menu')" class="chapter-select">[The Main Menu]</a></li>
+                <li><a href="#" onclick="ScrollToChapter('options')" class="chapter-select">[Options]</a></li>
+                <li><a href="#" onclick="ScrollToChapter('special-features')" class="chapter-select">[Special Features only Electronics AC DC Circuit Analysis App]</a></li>
+                    <ul>
+                        <li><a href="#" onclick="ScrollToChapter('norton-thevenin')" class="chapter-select">[Norton/Thevenin]</a></li>
+                        <li><a  href="#" onclick="ScrollToChapter('circuit-equations')" class="chapter-select">[Circuit Equations]</a></li>
+                    </ul>
+                <li><a href="#" onclick="ScrollToChapter('faq')" class="chapter-select">[FAQs]</a></li>
+                <li><a href="#" onclick="ScrollToChapter('programs')" class="chapter-select">[Programs from Computer Heroes LLC]</a></li>
+                <ul>       
+                    <li><a href="#" onclick="ScrollToChapter('dc-app-info')" class="chapter-select">[Electronics DC Circuit Analysis App]</a></li>
+                    <li><a href="#" onclick="ScrollToChapter('acdc-app-info')" class="chapter-select">[Electronics AC DC Circuit Analysis App] coming soon!<br />--Anticipated release Sept 24, 2020</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div id="body-content">
+        <div id="body-title">
+            <h2>Electronics DC Circuit Analysis App, Electronics AC DC Circuit Analysis App</h2>
+        </div>
+        <div id="body-main">
+            <div id="description" class="chapter">
+                <div class="chapter-title">
+                    <h3>Description</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        This document explains the workings of 2 Android Apps, <a class='DCAppLink'>Electronics DC Circuit Analysis App</a> 
+                        and the <a class='ACDCAppLink'>Electronics AC DC Circuit Analysis App</a>.  The Apps allows you to draw a circuit on
+                        a grid, to solve the circuit and display the voltages, and currents.  The DC version 
+                        <a class='DCAppLink'>Electronics DC Circuit Analysis App</a> allows this for DC Circuits, 
+                        <a class='ACDCAppLink'>Electronics AC DC Circuit Analysis App</a> (coming soon) allows for solution of both type of
+                        circuits DC or AC, and will also contains some additional special features. The branches entered may be voltage sources,
+                        current sources, resistors, or 1 of 4 types of controlled sources. The AC version will allow for inductors, capacitors,
+                        impedance and admittance branches.    The Apps have 4 main modes; [Nodes] [Branches] for entering data,
+                        [Solve] for computing the solution to the circuit, and [Display] for displaying the data.  
+                    </p>
+                </div>
+            </div>
+            <div id="getting-started-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="getting-started">Getting Started</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="figure-div"><img src="Images/Fig1.png" id="fig1" class="fig"><br /><h4>Fig. 1</h4></div>
+                    <p>
+                        The screen will come up blank (Fig. 1) The Mode button will be blue, and it will say DC Circuit on the black bar 
+                        above that button. <br />
+                        Note: If the Mode button does not say [Node], you should press that button, and on the screen that pops up press [Node] <br />
+                        Note If the screen is not clear, then you can clear it by pressing the [Menu] button, and on the screen that pops up 
+                        press [Clear Circuit] <br />
+                        Near the bottom of the screen towards the left side (see fig .2)    touch on an intersection of the horizontal and vertical
+                        lines.  The program will add a black circle with the number 0 in the middle. This is the ground node.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig2.png" id="fig2" class="fig"><br /><h4>Fig. 2</h4></div>
+                    <p>
+                        Step 2. Add a 2nd node by touching another intersection of the vertical and horizontal lines, this one near the top
+                        of the screen and above the ground node. (See fig 2) <br />
+                        Step 3. Add the 3rd node, once again by touching the intersection of 2 lines, this one to the right of the 2 previous
+                        nodes, and between them vertically. (See fig 2) <br />
+                        Step 4. Now we need to draw the branches between the nodes, so we must change the mode from [Node] to [Branch].  Click
+                        the [Mode] button to bring up the [Choose Mode] screen.  And click Branches.<br />
+                        Step 5. Place your finger on node 0 and draw a branch (resistor) from that node to node 2. It will bring up the Branch<br />
+                        mini screen.  (See fig 3)  Notice that mini screen is partially translucent. 
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig3.png" id="fig3" class="fig"><br /><h4>Fig. 3</h4></div>
+                    <p>
+                        Note: when drawing branches, it must connect 2 nodes.   On the first node you may place your finger close to a node and
+                        slide into a node.  And once a node has been chosen it will flash, and you can see the branch being drawn as you move your
+                        finger. You may occasionally need to lift your finger off the screen, and touch the node you wish to connect.<br />
+                        Step 6. In the yellow [Choose Type] select [R ] for “resistor” to bring up the next screen. See Fig 4.
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig4.png" id="fig4" class="fig"><br /><h4>Fig. 4</h4></div>
+                    <p>
+                        Touch the lightly colored box, next to the Value label and this will bring up the keyboard. Enter 6 by Clicking 6 on the
+                        keyboard and then the [Return Key] and final the Red [ENTER BR] button.  The circuit screen will show an extended label which
+                        has the information of the branch just entered <br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig5.png" id="fig5" class="fig"><br /><h4>Fig. 5</h4></div>
+                    <p>
+                        Touching the branch label can be done in 3 different ways for 3 different functions.  You can place your finger on the arrows
+                        in the upper right corner of the label box and while not lifting it off the screen, move your finger to a new location and
+                        once you have it where you would like, lift your finger.  You can also click on the label ( anywhere other than the upper
+                        right corner) and it will allow you to modify the information, for that branch.  The 3rd function is after a circuit is solved
+                        and is explained later in this document.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig6.png" id="fig6" class="fig"><br /><h4>Fig. 6</h4></div>
+                    <p>
+                        Step 7. Enter a branch parallel to the one just entered by again drawing a resistor from node 0 to node 2, and again select
+                        Resistor for type and again give it a value of 6 <br />
+                        Step 8. Draw a resistor branch from node 2 to node 1 and give it a value of 9.<br />
+                        Step 9. Draw one more branch, a current source from node 0 to Node 2.   This time select [ I(s) ] for a current source from node
+                        0 to Node 2.  Give it a value of 5.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig7.png" id="fig7" class="fig"><br /><h4>Fig. 7</h4></div>
+                    <p>
+                        You can use the arrows in the upper right corner of the label to move the labels to convenient locations.<br />
+                        You are now ready to solve the circuit, which you have just drawn.  Click the [Mode] button, and choose [SOLVE].
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig8.png" id="fig8" class="fig"><br /><h4>Fig. 8</h4></div>
+                    <p>
+                        Notice that labels now have an additional line  at the bottom, which shows the branch voltage of each branch. There are also some
+                        new buttons in the bottom area. These allow you to display the voltage, current and power of each branch.  While the program is
+                        in display mode, there are some additional features available.  You can click on a label and view all the information for the
+                        branch at one time. See Fig 9.  You can also click on a node and display the node voltage for that node.  The 2 screens also have
+                        arrows that allow you to scroll through the branch and node information.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig9.png" id="fig9" class="fig"><br /><h4>Fig. 9</h4></div>
+                </div>
+            </div>
+            <div id="app-function-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="app-function">App Functions</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        The App operates in 4 main modes. 	 [Nodes],     [Branches],   [Solve],   [Display]<br />
+                        This user chooses the mode by the Mode button. After hitting solve the program goes to [Display]<br />
+                        [Nodes]     [Branches]   modes allow the user to enter nodes and branches respectively.<br />
+                        [Solve]   commands the App to solve the circuit.<br />
+                        [Display] displays the solution of the circuit just solved.<br />
+                    </p>
+                </div>
+            </div>
+            <div id="choosing-ac-or-dc-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="choosing-ac-or-dc">Choosing AC or DC, Choosing the Source Frequency. {AC DC only}</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        The App AC DC operates as either AC or DC, and if AC is chosen, the user must also a frequency for
+                        the independent sources.  The user first clicks the [Menu] button, and then click the [Circuit Type/Frequency]
+                        button.  The following screen will appear. <br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig10.png" id="fig10" class="fig"><br /><h4>Fig. 10</h4></div>
+                    <p>
+                        User should choose AC or DC from the drop-down list and if AC is chosen then to touch the Entry box to enter
+                        the numeric frequency.  Finally, the user should use the dropdown list which is to the right of the Entry box to
+                        choose the frequency multiplier.  Choices include htz (ie no multiplier), K for Kilohertz,  M for Megahertz,  G
+                        for Gigahertz, or T for Terahertz.  After the user hits the [ENTER] key the App will display the type of Circuit
+                        along with the frequency (if applicable) on left side of the black bar, which lies above the [Mode] and [Menu]
+                        buttons.<br />
+                        Entering Circuit Data on the Grid   	[Nodes] 	[Branches] <br />
+                        The Grid contains 25 horizontal and 25 vertical lines.  The first and last horizontal and vertical lines are a
+                        different color than the rest.  Not all the grid lines can be shown on the grid at once, so 2 scroll bars are
+                        includes below the grid, to allow the user can scroll the screen.  Nodes must be added at the places where 2 
+                        lines intersect.
+                    </p>
+                </div>
+            </div>
+            <div id="node-mode-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="node-mode">[Node Mode]</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        In order to add nodes to the grid, the user must be in the Node mode.  The user should check that the mode button
+                        (see above) says  [Node Mode} and if it does not, they should click that button and select Node from the choices.<br />
+                        The Node Mode allows the user to Add, Delete, and to modify the nodes in several different ways.  If the user clicks
+                        on an intersection without a node, a node will be added.  The very first node will be named 0 and will be the ground
+                        node (although the user can later change this) Subsequent nodes will take the next available number.    If the user
+                        clicks on an existing node, then the node menu shown below will appear<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig11.png" id="fig11" class="fig"><br /><h4>Fig. 11</h4></div>
+                    <p>
+                        [Delete Node]   The selected Node is deleted<br />
+                        [Rename Node] The user is prompted to give the user a new name.<br />
+                        Note about the naming of nodes.  Node names may contain 1 or 2 characters only.  Naming a node “0” is the same as making
+                        it the ground node. A circuit must have a ground node, which will have a voltage of zero.  The other nodes are not
+                        restricted.  It is possible to give 2 nodes the same name, if you do this then electrically the nodes are the same, and
+                        will have the same node voltage.  For example the 2 circuits shown below are equivalent.  Note nodes can also be stretched<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig12.png" id="fig12" class="fig"><br /><h4>Fig. 12</h4></div>
+                    <h4>Stretching a Node</h4>
+                       <p>
+                            The node menu also give the user the option of stretching a node.  Often the ground node in circuit schematics found in books
+                            and magazines is stretched along the bottom horizontal.  Occasionally other nodes are stretched as well.  The Apps allow the
+                            user to stretch a node in either the horizontal or vertical direction.  Stretching a node in 4 step process.  <br />
+                            <ul>
+                                <li>Step 1 Click on the Node that you wish to stretch.</li>
+                                <li>Step 2 Choose either Stretch Horizontal or Stretch Vertical.  A node can only be stretched in one direction.</li>
+                                <li>Step 3. The chosen node will flash.  If the user wants to stretch the node horizontally then the user should touch the
+                                    screen to the right or left on the node. If the node is a single point or already a stretched node it will stretch in that
+                                    direction.  Note: A node cannot be stretched on top of another node.</li>
+                                <li>Step 4. The user can now add sub nodes onto the stretched node.  Sub nodes are added when a user clicks on a line at a 
+                                    place where a node does not exist. If you click on a sub node (assuming that no branches are connected) it is removed.   Up 
+                                    to 6 sub Nodes can be entered, not including the 2 ends of each node</li>
+                            </ul>
+                            Stretching a node vertically works similarly to horizontally except the node is stretched Up and down rather than right and left.<br />
+                            It is important to note that the end points and the sub nodes of a node is where a branch is to connect to a node. A branch that
+                            hits a stretched node anywhere else will not be connected.  In the figure below the 2 capacitors connect node 1 and 4.  The resistor
+                            connects node 2 and node 3, it crosses node 1 but, since it does not a hit a sub node it does not connect to node 1 <br />
+                        </p>
+                    <div class="figure-div"><img src="Images/Fig13.png" id="fig13" class="fig"><br /><h4>Fig. 13</h4></div>
+                </div>
+            </div>
+            <div id="branch-mode-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="branch-mode">[Branch Mode]</h3>
+                </div>
+                <div class="chapter-body">
+                    <h4 class="subchapter-header" id="branches-dc-detail">Branches in DC  In more detail</h4>
+                    <p>
+                        To draw the branches the user first puts the App in Branch Mode by clicking the Mode button and choosing Branch.
+                        For DC Circuits there are 9 types of Branches, which the user can choose. 
+                        <ul>
+                            <li>R – Resistor</li>
+                            <li>C – Capacitor		- note not active in a DC Circuit </li>
+                            <li>L – Inductor		- note not active in a DC Circuit</li>
+                            <li>I(s) – Current Source</li>
+                            <li>V(s) – Voltage Source</li>
+                            <li>VCCS – Voltage Controlled Current Source</li>
+                            <li>VCVS – Voltage Controlled Voltage Source</li>
+                            <li>CCCS – Current Controlled Current Source</li>
+                            <li>CCVS - Current Controlled Voltage Source</li>
+                        </ul>
+                        When the user draws a branch connecting 2 nodes they will be given a choice in a dropdown list and should use it to tell the app
+                        what kind of branch they have just drawn.<br />
+                        Depending on the type of branch, it may allow for the user to enter additional information.  The information to be entered, for
+                        each branch is described first This is followed by a description of the  specific information required for certain types of branches.
+                        See Fig 14 <br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig14.png" id="fig14" class="fig"><br /><h4>Fig. 14</h4></div>
+                    <p>
+                        The first line includes the Entry Box, which holds the name of the Branch.  The App chooses a name for the branch depending on the 
+                        type of Branch, but the user may give the branch a different name.  For example the first resistor will given the unimaginative name 
+                        of R1.<br />
+                        The second line contains the branch type and the nodes (From and To) which the branch contains.  These are unchangeable by the user.<br />
+                        The 3rd line is for the Value label, the Value Entry box, the value multiplier and finally the units of the branch. For example the
+                        resistor has a multiplier drop down list of nothing, K (for Kilo), or M for Mega; and a resistor has a units of ohms.<br />
+                        Every type of Branch has a checkbox near the bottom, which allows the user to add a line to the branch label with a note <br />
+                        The 4 types of controlled source branches, VCCS, VCVS, CCCS, and CCVS allow for the user to select a branch which controls them.  For
+                        a Voltage Controlled Source, any type of branch can be a controlled branch, for a Current Controlled Branch, the Control Branch must
+                        be a resistor.  The control voltage for a control branch is the rise in voltage (which could be negative in value) from the Fr node to
+                        the To Node.  The control current for a control branch is the current flow (which could be negative in value) from the Fr node to the
+                        To Node.<br />
+                        The voltage Source as well as the VCVS, and the CCVS have an addition option that other types of branches don’t have.  These have the
+                        option of adding a resistor in line with the voltage source or controlled voltage source.  Circuits where all Voltage Sources are
+                        paired with a resistor in series are in some ways easier for a computer to handle than lone voltage sources, however these Apps can
+                        handle both types.<br />
+                    </p>
+                    <h4 class="subchapter-header" id="branches-ac-detail">Branches in AC  (in more detail)</h4>
+                    <p>
+                        To draw the branches the user first puts the App in Branch Mode by clicking the Mode button and choosing Branch.<br />
+                        For AC Circuits there are 11 types of Branches, which the user can choose, the same 9 branch types available, plus 2 new
+                        types, Z Impedance, and Y Admittance.<br />
+                        For AC Circuits there are 11 types of Branches, which the user can choose.
+                        <ul> 
+                            <li>R – Resistor</li>
+                            <li>C – Capacitor</li>
+                            <li>L – Inductor</li>
+                            <li>Z - Impedance</li>
+                            <li>Y - Admittance 	 </li>
+                            <li>I(s) – Current Source</li>
+                            <li>V(s) – Voltage Source</li>
+                            <li>VCCS – Voltage Controlled Current Source</li>
+                            <li>VCVS – Voltage Controlled Voltage Source</li>
+                            <li>CCCS – Current Controlled Current Source</li>
+                            <li>CCVS - Current Controlled Voltage Source</li>
+                        </ul>
+                        Depending on the type of branch, it may allow for the user to enter additional information.  The information to be
+                        entered, for most branch is described first This is followed by a description of the  specific information required for
+                        certain types of branches. See Fig 15 <br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig15.png" id="fig15" class="fig"><br /><h4>Fig. 15</h4></div>
+                    <p>
+                        The first line includes the Entry Box, which holds the name of the Branch.  The App chooses a name for the branch depending
+                        on the type of Branch, but the user may give the branch a different name  For example the first resistor will given the
+                        unimaginative name of R1.<br />
+	                    The second line contains the branch type and the nodes (From and To) which the branch contains.  These are unchangeable by the user.<br />
+                        The 3rd line is for the Value label, the Value Entry box, the value multiplier and finally the units of the branch. For example
+                        the resistor has a multiplier drop down list of nothing, K (for Kilo), or M for Mega; and a resistor has a units of ohms. <br />
+                    	Every type of Branch has a checkbox near the bottom, which allows the user to add a line to the branch label with a note <br />
+                        The types of I(s) Current Source and V(s) Voltage Source, in the AC circuit, have an additional Entry Box and Drop Down List
+                        which allows the user to enter the Numeric Angle and the units of the angle,  (in degrees or in radians) <br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig16.png" id="fig16" class="fig"><br /><h4>Fig. 16</h4></div>
+                    <p>
+                        The 4 types of controlled source branches, VCCS, VCVS, CCCS, and CCVS allow for the user to select a branch which controls them.
+                        For a Voltage Controlled Source, any type of branch can be a controlled branch, for a Current Controlled Branch, the Control Branch
+                        must be a resistor.  The control voltage for a control branch is the rise in voltage (which could be negative in value) from the Fr
+                        node to the To Node.  The control current for a control branch is the current flow (which could be negative in value) from the Fr node
+                        to the To Node.<br />
+                        The voltage Source as well as the VCVS, and the CCVS have an addition option that other types of branches don’t have.  These have the
+                        option of adding a resistor in line with the voltage source or controlled voltage source.  Circuits where all Voltage Sources are
+                        paired with a resistor in series are in some ways easier for a computer to handle than lone voltage sources, however these Apps can
+                        handle both types.<br />
+                        The final 2 Branch Types (Z – Impedance, Y – Admittance) follow a slightly different format than the others  The 1st 2 lines are the
+                        same, and the last line to add a note are the same, but instead of a single Value line with a Multiplier drop box, these   types have
+                        2 input boxes each with an associated drop box, to allow for the input of a Real and Imaginary part of the impedance or Admittance.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig17.png" id="fig17" class="fig"><br /><h4>Fig. 17</h4></div>
+                    <p>.
+                        <h4 class="subchapter-header" id="modify-branch">Modifying a Branch</h4>
+                        When  a user has finished entering a branch,  and has not hit the 1st node for the next branch (or when previous branches have been
+                        entered, and the user comes back to Branch Mode) The user may modify a branch by clicking on a branch’s label.  A screen similar to
+                        the Branch entry screen will come up.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig18.png" id="fig18" class="fig"><br /><h4>Fig. 18</h4></div>
+                    <p>
+                        Notice that the buttons in the lower part of the screen are slightly different than the buttons for ENTERING a branch.  The user may
+                        hit [Delete] to delete the branch completely. He may hit [Cancel] to leave the branch alone.  The user may modify the screen data and
+                        then [UPDATE] the Branch.  Finally the user may also draw more drawing strokes onto the branch by clicking the [DRAW] button.  There
+                        is no way to undrawn anything,   There is also no way to change the type of a branch.  If you want to do that, you should delete the
+                        existing branch and then enter a new branch in it’s place.<br />
+                    </p>
+                </div>
+            </div>
+            <div id="main-menu-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="main-menu">[The Main Menu]</h3>
+                </div>
+                <div class="chapter-body">
+                    <div class="figure-div"><img src="Images/Fig19.png" id="fig19" class="fig"><br /><h4>Fig. 19</h4></div>
+                    <ul>
+                        <li>Set Mode –  This is the same as the Mode Button</li>
+                        <li>Solve – This is the same as choosing Solve from the Mode Button
+                        <li>Advanced Solution – Allows 4 types of Commands: [Solve], [Info], [Norton/Thevenin] and [Circuit Equations].  [Solve] is like the
+                            Solve on the Mode Button. [Info] will retrieve information about the circuit.  The last 2 commands, [Norton/Thevenin] and
+                            [Circuit Equations] are only available in the AC DC Circuit Analysis App, and are described below.</li>
+                        <li>Options – This Brings up the [OPTIONS] Menu (see below)</li>
+                        <li>Circuit Type / Frequency – Allows the user to set the type the circuit AC or DC, and if AC, to set the frequency of the circuit.</li>
+                        <li>Clear Circuit – Deletes all the nodes and Branches of Circuit.</li>
+                        <li>Title – Gives the Circuit a title.  It is displayed in the black bar between the tray of buttons and the circuit drawing area.  If
+                            the user does not use this option, the circuit will be referred to as UnNamed.</li>
+                        <li>About – Displays information about this App.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="options-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="options">[Options]</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        The following Screen is show.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig20.png" id="fig20" class="fig"><br /><h4>Fig. 20</h4></div>
+                    <ul>
+                        <li>Set Background – Allows the user to Change the color of the circuit drawing area.</li>
+                        <li>Ver Line Thickness - Allows the user to Change the width of the vertical lines</li>
+                        <li>Hor Line Thickness - Allows the user to Change the width of the horizontal lines</li>
+                        <li>Br Line Thickness - Allows the user to Change the width of the drawn branches</li>
+                        <li>Branch Colors – colors used for the branches.   The first color is the main color and is the color of the drawn branches,  the 
+                            2nd color is the one used while a branch is being drawn, and the last color is the color used when moving a label.</li>
+                        <li>Angle Display – This option is only applicable to AC Circuits.  The user can choose how voltages and currents are displayed.
+                            There are 4 options</li>
+                        <ul>
+                            <li>0 – Voltage and Current are displayed with magnitude and angle with the angle in degrees</li>
+                            <li>1 - Voltage and Current are displayed with magnitude and angle with the angle in radians</li>
+                            <li>2 - Voltage and Current are displayed with real & imaginary parts, and degrees are used on the detail page</li>
+                            <li>3 - Voltage and Current are displayed with real & imaginary parts, and radians are used on the detail page</li>
+                        </ul>
+                        <li>WaterMark - Shows or hides the Watermark shown on the circuit drawing area.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="special-features-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="special-features">[Special Features only Electronics AC DC Circuit Analysis App]</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        There are 2 additional features that AC DC version of the program has that the DC  version does not.  In the AC DC version only,
+                        both these features can be used on either AC or DC circuits.<br />
+                    </p>
+                    <h4 class="subchapter-header" id="norton-thevenin">[Norton/Thevenin]</h4>
+                    <p>
+                         To find the Norton and Thevenin equivalent of a circuit, the user should hit [Menu] [Advanced Solution] [Norton/Thevenin]<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig21.png" id="fig21" class="fig"><br /><h4>Fig. 21</h4></div>
+                    <p>
+                        The App will now display in the display window at the bottom:<br />
+                        Choose 2 Nodes for Norton/Thevenin.<br />
+                        The user should hit 2 nodes and the following will appear in the button tray and the display box.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig22.png" id="fig22" class="fig"><br /><h4>Fig. 22</h4></div>
+                    <p>
+                        The user should hit [Comp] <br />
+                        The App will display in the screen the Norton and Thevnin solutions.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig23.png" id="fig23" class="fig"><br /><h4>Fig. 23</h4></div>
+                    <h4 class="subchapter-header" id="circuit-equations">[Circuit Equations]</h4>
+                    <p>
+                        To find the Norton and Thevenin equivalent of a circuit, the user should hit [Menu] [Advanced Solution] [Circuit Equations]<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig24.png" id="fig24" class="fig"><br /><h4>Fig. 24</h4></div>
+                    <p>
+                        And the circuit equations will be displayed.<br />
+                    </p>
+                    <div class="figure-div"><img src="Images/Fig25.png" id="fig25" class="fig"><br /><h4>Fig. 25</h4></div>
+                </div>
+            </div>
+            <div id="contact-us-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="contact-us">[Contacting Us]</h3>
+                </div>
+                <p>
+                    Comments about these Apps.  You may contact us at:<br />
+                    <a href="mailto:computerheroes07@gmail.com">computerheroes07@gmail.com</a><br />
+                </p>
+            </div>
+            <div id="faq-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="faq">[FAQs]</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        Q. When Drawing a Branch from node to node, sometimes it doesn’t bring up the branch page.<br />
+                        Ans.  Yes, sometimes this happens.  Usually when you slide into a  node, the App will act properly, but occasionally you may 
+                        need to slide into the node again, or you may need  to lift your finger and then actually touch the 2nd node.<br /><br />
+
+	                    Q.  How big a circuit can the App Handle? <br />
+                        Ans.  You may enter circuits with up to 24 branches, and 20 nodes.  You cannot display the node equations of a circuit with
+                        more than 5 branches<br /><br >
+
+                        Q. Can you draw say a [resistor] and then choose say [Current Source] as the branches type.<br />
+                        Ans.  Yes, although this would be confusing it is possible to do this.<br />
+                    </p>
+                </div>
+            </div>
+            <div id="programs-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="programs">[Programs from Computer Heroes LLC]</h3>
+                </div>
+                <div class="chapter-body">
+                    <h4 class="subchapter-header" id="dc-app-info">[Electronics DC Circuit Analysis App]</h4>
+                    <p>
+                        This App will allow you to draw a DC Circuit on a grid, to solve the circuit and display node voltages, branch voltages, branch
+                        currents and branch powers.  Branches may be current sources, voltage sources (with or without a built in resistor in series),
+                        resistors, or 4 types of controlled sources VCCS, CCCS,  VCVS, CCVS<br />
+                    </p>
+                    <h4 class="subchapter-header" id="acdc-app-info">[Electronics AC DC Circuit Analysis App]</h4>
+                    <p>
+                        coming soon! [Anticipated release Sept 4, 2020]<br /><br />
+                        The Apps can do everything the DC app can do, PLUS<br />
+                        Can also solve AC Circuits.<br />
+                        Allows Additional types of branches Impedance and Admittance<br />
+                        Can Show Circuit Equations for both AC and DC Circuits<br />
+                        Can compute the Norton and Thevenin equivalent for both AC and DC Circuits<br />
+                    </p>
+                </div>
+            </div>
+            <div id="disclaimer-chapter" class="chapter">
+                <div class="chapter-title">
+                    <h3 id="disclaimer">[Disclaimer]</h3>
+                </div>
+                <div class="chapter-body">
+                    <p>
+                        The Apps are for educational, and academic use only. Computer Heroes LLC accepts no liability for and damage or injury resulting from 
+                        using these Apps or the results of these Apps.   User should verify any results from the program before making or modifying any type
+                        of electronic constructions.  Any reliance you place on the results of these apps is therefore strictly at your own risk.<br /><br />
+
+                        Copyright 2020 by Computer Heroes, all right reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".chapter-select").on('click', function(e) {
+                e.preventDefault();
+            });
+        });
+        function ScrollToChapter(chapterId) {
+            $("#" + chapterId)[0].scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+    </script>
+</body>
