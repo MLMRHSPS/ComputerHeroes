@@ -3,8 +3,17 @@
     <link rel="stylesheet" type="text/css" href="css/ComputerHeroes.css">
 </header>
 <body>
+    <div id=logo-div>
+        <img src="images/Logo.png" id="logo-img">
+    </div>
     <div id="title-bar">
-        <h1>Computer Heroes</h1>
+            <img src="images/ComputerHeroesTitle.png" id="title-img" />
+    </div>
+    <div id="view-controls">
+        <input type='button' id="TOC-view" value='Hide Table of Contents' />
+        <input type='hidden' id="TOC-is-hidden" value='false' />
+        <input type='button' id="font-resize" value='Enlarge Font' />
+        <input type='hidden' id="current-font-size" value='small' />
     </div>
     <div id="nav-bar">
         <div id="nav-bar-inner">
@@ -484,6 +493,32 @@
         $(document).ready(function() {
             $(".chapter-select").on('click', function(e) {
                 e.preventDefault();
+            });
+            $("#TOC-view").on('click', function(e) {
+                if ($("#TOC-is-hidden").val() == 'true') {
+                    $("#nav-bar").removeClass('nav-hidden');
+                    $("#TOC-is-hidden").val('false');
+                    $("#body-content").removeClass('body-content-wide');
+                    $("#TOC-view").text('Hide Table of Contents');
+                }
+                else {
+                    $("#nav-bar").addClass('nav-hidden');
+                    $("#TOC-is-hidden").val('true');
+                    $("#body-content").addClass('body-content-wide');
+                    $("#TOC-view").text('Show Table of Contents');
+                }
+            });
+            $("#font-resize").on('click', function(e) {
+                if ($("#current-font-size").val() == 'small') {
+                    $("p").addClass('large-text');
+                    $(".chapter-title h3").addClass('large-text');
+                    $("#current-font-size").val('large');
+                } 
+                else {
+                    $("p").removeClass('large-text');
+                    $(".chapter-title h3").removeClass('large-text');
+                    $("#current-font-size").val('small');
+                }
             });
         });
         function ScrollToChapter(chapterId) {

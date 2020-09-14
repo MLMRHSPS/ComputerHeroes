@@ -9,16 +9,41 @@
     vertical-align: middle;
 }
 
+#logo-div {
+    z-index: 9999;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 10%;
+    max-width: 10%;
+    margin: auto;
+}
+
+#logo-img {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+#title-img {
+    height: 100%;
+    max-width: 80%;
+}
+
+#logo-img {
+    height: 100%;
+    width: 100%;
+}
+
 #title-bar h1 {
     color : #fff;
     font-family: 'Courier New', Courier, monospace;
 }
 #nav-bar {
     width : 20%;
-    height : 90%;
+    height : 87%;
     position : fixed;
     left : 0px;
-    top: 10%;
+    top: 13%;
     background-color: #aaa;
 }
 
@@ -30,9 +55,9 @@
     padding : 5px;
     position: relative;
     left: 20%;
-    top: 10%;
+    top: 13%;
     width: 80%;
-    height: 90%;
+    height: 87%;
 }
 
 #body-title {
@@ -40,15 +65,72 @@
     text-align: center;
     width: 80%;
     height: 10%;
-    top: 10%;
+    top: 13%;
     left:20%;
     background-color: #fff;
 }
 
 #body-main {
-    position : relative;
-    width : 100%;
+    position: relative;
+    width: 100%;
     top: 10%;
     height: 90%;
     z-index: -5;
+}
+
+#view-controls {
+    position: fixed;
+    top: 10%;
+    height: 5%;
+    width: 100%;
+    background-color: #fff;
+}
+
+#body-content.body-content-wide {
+    width: 100%;
+    left: 0%;
+}
+
+p.large-text {
+    font-size: 18;
+}
+
+.chapter-title h3.large-text {
+    font-size: 24;
+}
+
+#nav-bar.nav-hidden {
+    visibility: hidden;
+}
+
+#TOC-view {
+    position: fixed;
+    top: 10%;
+    width: 50%;
+    left: 0%;
+    height: 3%;
+    background-color: #33a;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+
+#TOC-view:hover {
+    background-color: #118;
+}
+
+#font-resize {
+    position: fixed;
+    top: 10%;
+    width: 50%;
+    left: 50%;
+    height: 3%;
+    background-color: #33a;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+
+#font-resize:hover {
+    background-color: #118;
 }
