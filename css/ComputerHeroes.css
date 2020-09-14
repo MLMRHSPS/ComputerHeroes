@@ -16,7 +16,8 @@
     top: 0px;
     height: 10%;
     max-width: 10%;
-    margin: auto;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #logo-img {
