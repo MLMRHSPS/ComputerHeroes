@@ -98,8 +98,12 @@
     left: 0%;
 }
 
-p.large-text {
+p.large-text, .chapter-body li.large-text {
     font-size: 30;
+}
+
+.subchapter-header.large-text {
+    font-size: 34;
 }
 
 .chapter-title h3.large-text {
