@@ -93,6 +93,11 @@
     left: 0%;
 }
 
+#body-title.body-title-wide {
+    width: 100%;
+    left: 0%;
+}
+
 p.large-text {
     font-size: 30;
 }

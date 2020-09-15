@@ -499,12 +499,14 @@
                     $("#nav-bar").removeClass('nav-hidden');
                     $("#TOC-is-hidden").val('false');
                     $("#body-content").removeClass('body-content-wide');
+                    $("#body-title").removeClass('body-title-wide');
                     $("#TOC-view").text('Hide Table of Contents');
                 }
                 else {
                     $("#nav-bar").addClass('nav-hidden');
                     $("#TOC-is-hidden").val('true');
                     $("#body-content").addClass('body-content-wide');
+                    $("#body-title").addClass('body-title-wide');
                     $("#TOC-view").text('Show Table of Contents');
                 }
             });
@@ -513,11 +515,13 @@
                     $("p").addClass('large-text');
                     $(".chapter-title h3").addClass('large-text');
                     $("#current-font-size").val('large');
+                    $("#font-resize").val('Shrink Text');
                 } 
                 else {
                     $("p").removeClass('large-text');
                     $(".chapter-title h3").removeClass('large-text');
                     $("#current-font-size").val('small');
+                    $("#font-resize").val('Enlarge Text');
                 }
             });
         });
