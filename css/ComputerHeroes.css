@@ -57,6 +57,7 @@
 
 #nav-bar-inner {
     padding: 5px;
+    overflow-y: scroll;
 }
 
 #body-content {
