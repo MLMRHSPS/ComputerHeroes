@@ -42,10 +42,10 @@
 }
 #nav-bar {
     width : 20%;
-    height : 87%;
+    height : 85%;
     position : fixed;
     left : 0px;
-    top: 13%;
+    top: 15%;
     background-color: #aaa;
 }
 
@@ -57,7 +57,7 @@
     padding : 5px;
     position: relative;
     left: 20%;
-    top: 13%;
+    top: 15%;
     width: 80%;
     height: 87%;
 }
@@ -67,7 +67,7 @@
     text-align: center;
     width: 80%;
     height: 10%;
-    top: 13%;
+    top: 15%;
     left:20%;
     background-color: #fff;
 }
@@ -76,16 +76,17 @@
     position: relative;
     width: 100%;
     top: 10%;
-    height: 90%;
+    height: 85%;
     z-index: -5;
 }
 
 #view-controls {
+    background-color: #33a;
     position: fixed;
     top: 10%;
     height: 5%;
     width: 100%;
-    background-color: #fff;
+    left: 0px;
 }
 
 #body-content.body-content-wide {
@@ -116,32 +117,48 @@
 
 #TOC-view {
     position: fixed;
-    top: 10%;
+    top: 11%;
     width: 50%;
     left: 0%;
     height: 3%;
-    background-color: #33a;
+    background-color: #229;
     text-align: center;
     vertical-align: middle;
     color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 #TOC-view:hover {
     background-color: #118;
 }
 
+#TOC-view:active {
+    background-color: #118;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 #font-resize {
     position: fixed;
-    top: 10%;
+    top: 11%;
     width: 50%;
     left: 50%;
     height: 3%;
-    background-color: #33a;
+    background-color: #229;
     text-align: center;
     vertical-align: middle;
     color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 #font-resize:hover {
     background-color: #118;
+}
+
+#font-resize:active {
+    background-color: #118;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
