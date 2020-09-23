@@ -165,4 +165,5 @@
 
 .fig {
     width: 50%;
+    max-width: 405px;
 }
