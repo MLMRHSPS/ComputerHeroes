@@ -98,7 +98,7 @@
     left: 0%;
 }
 
-p.large-text, .chapter-body li.large-text {
+.p.large-text, .chapter-body li.large-text {
     font-size: 30;
 }
 
