@@ -1,3 +1,9 @@
+
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
 #title-bar {
     background-color : #33a;
     position : fixed;
